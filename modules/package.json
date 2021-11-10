@@ -1,0 +1,12 @@
+{
+    "name": "application_name",
+    "version": "0.0.0",
+    "description": "for single page debugging",
+    "main": "ab.js",
+    "scripts": {
+        "start": "nodemon kma.js",
+        "test": "SET NODE_DEBUG=request&&nodemon kma.js"
+    },
+    "author": "",
+    "license": "ISC"
+  }

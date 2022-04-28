@@ -1,14 +1,11 @@
-const { getAndReadXLS } = require("../modules/kma");
-// const User = require("../models/users");
-
+//auth user
 const getData = async (req, res) => {
-  try {
-    let { fullInfo } = await getAndReadXLS();
-    res.status(200).json({ success: true, message: fullInfo });
-  } catch (error) {
-    // console.log(error);
-    res.status(401).json({ success: false, message: "Unauthorized" });
-  }
+    try {
+        res.status(200).json({ success: true });
+    } catch (error) {
+        // console.log(error);
+        res.status(401).json({ success: false, message: "User not defined" });
+    }
 };
 
 module.exports = getData;

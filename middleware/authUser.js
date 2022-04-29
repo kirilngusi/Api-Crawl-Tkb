@@ -15,7 +15,7 @@ const verifyToken = (req, res, next) => {
         //if success
         req.body = { ...req.body, decoded };
 
-        req.userId = decoded.userId;
+        req.userId = decoded.user;
         next();
     } catch (error) {
         console.log(error);

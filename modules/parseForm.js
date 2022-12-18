@@ -25,7 +25,7 @@ const parseSelector = ($) => {
   let select = form.find("select");
 
   select.each((i, elem) => {
-    let options = $(elem).find($("option[selected]"))[0];
+    let options = $(elem).find($("option[value='8e5f8f99cc7b4ddc83cd62863244b432']"))[0];
     data[$(elem).attr("name")] =
       (options && $(options).attr("value")) || undefined;
   });

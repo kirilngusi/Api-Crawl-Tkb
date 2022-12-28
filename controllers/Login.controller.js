@@ -1,7 +1,7 @@
-const { login } = require("../modules/kma");
-const User = require("../models/users");
+const { login } = require('../modules/kma');
+const User = require('../models/users');
 
-const jwt = require("jsonwebtoken");
+const jwt = require('jsonwebtoken');
 
 const loginController = async (req, res) => {
     const { username, password } = req.body;
@@ -10,7 +10,7 @@ const loginController = async (req, res) => {
         if (!username || !password) {
             return res.status(400).json({
                 success: false,
-                message: "Missing username and/or password",
+                message: 'Missing username and/or password'
             });
         }
         let { schedule } = await login(username, password);
@@ -39,13 +39,13 @@ const loginController = async (req, res) => {
             return res.status(200).json({
                 success: true,
                 message: schedule,
-                accessToken,
+                accessToken
             });
         }
     } catch (error) {
         res.status(401).json({
             success: false,
-            message: "Unauthorized",
+            message: 'Unauthorized'
         });
     }
 };

@@ -1,4 +1,4 @@
-const User = require("../models/users");
+const User = require('../models/users');
 
 //auth user
 const getData = async (req, res) => {
@@ -7,13 +7,13 @@ const getData = async (req, res) => {
         if (!user) {
             res.status(401).json({
                 success: false,
-                message: "User not defined",
+                message: 'User not defined'
             });
         }
         res.status(200).json({ success: true, student_id: req.userId });
     } catch (error) {
         // console.log(error);
-        res.status(401).json({ success: false, message: "User not defined" });
+        res.status(401).json({ success: false, message: 'User not defined' });
     }
 };
 

@@ -5,7 +5,6 @@ const jwt = require('jsonwebtoken');
 
 const loginController = async (req, res) => {
     const { username, password } = req.body;
-    // console.log(username, password);
     try {
         if (!username || !password) {
             return res.status(400).json({
@@ -16,11 +15,7 @@ const loginController = async (req, res) => {
         let { schedule } = await login(username, password);
 
         const student_id = schedule.fullInfo.student_id;
-
-        //save username in db
-        // const newUser = new User({ username });
-        // newUser.save();
-
+        
         const findUser = await User.findOne({ username });
 
         if (!findUser) {

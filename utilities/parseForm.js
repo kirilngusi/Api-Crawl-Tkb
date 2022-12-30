@@ -28,7 +28,17 @@ const parseSelector = ($) => {
     return data;
 };
 
+const parseSemester = ($) => {
+    const semesters = Array.from($('select[name="drpSemester"] > option')).map((e) => ({
+        value: $(e).attr('value'),
+        name: $(e).text()
+    }));
+
+    return semesters;
+};
+
 module.exports = {
     parseInitialFormData,
-    parseSelector
+    parseSelector,
+    parseSemester
 };

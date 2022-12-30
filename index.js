@@ -40,7 +40,7 @@ app.use(function (req, res, next) {
 app.use('/', KMA_router);
 
 app.listen(process.env.PORT, () => {
-    console.log(`Sever Connected with port: ${process.env.PORT}`);
+    console.log(`Sever Connected with port: http://localhost:${process.env.PORT}`);
 });
 
 module.exports = app;

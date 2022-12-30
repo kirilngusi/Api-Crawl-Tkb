@@ -12,7 +12,7 @@ const getData = async (req, res) => {
         }
         res.status(200).json({ success: true, student_id: req.userId });
     } catch (error) {
-        // console.log(error);
+
         res.status(401).json({ success: false, message: 'User not defined' });
     }
 };

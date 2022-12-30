@@ -5,7 +5,6 @@ const UserSchema = new Schema({
     username: {
         type: String
     },
-    // schedule: scheduleSchema,
     createAt: {
         type: Date,
         default: Date.now
